@@ -7,7 +7,6 @@ import { SITE } from '../consts';
   <article class="resume">
     <h1>{SITE.name}</h1>
     <p class="meta">Pasco, WA · <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
-    <p class="resume-actions"><a href="/resume.pdf" download>Download PDF</a></p>
 
     <h2>Profile</h2>
     <p>
@@ -47,7 +46,6 @@ import { SITE } from '../consts';
         <li>Built a FedRAMP-compliant database restore process to demonstrate disaster recovery for annual assessment.</li>
         <li>Automated CorePAS component install/upgrade with Ansible, cutting deployment time by ~2 hours vs. the prior manual process.</li>
         <li>Executed STIG hardening and upgrades to satisfy NIST 800-53 Rev5 controls; eliminated wildcard certificates and configured automatic access key rotation.</li>
-        <li>Led modernization from legacy Windows/IIS + MSSQL to Kubernetes microservices on RDS Postgres, OpenSearch, and RabbitMQ.</li>
         <li>Architect and maintain cloud-native infrastructure (EKS, EC2, RDS/Postgres, S3, VPC, IAM) fully codified in Terraform, managed with Helm, Ansible, and Bamboo CI/CD.</li>
         <li>Own the vulnerability management loop — Tenable/Nessus and Invicti scanning, CVE triage, remediation coordination, and audit-ready reporting — plus certificate lifecycle operations across ACM, OpenSSL, and internal CAs.</li>
       </ul>
