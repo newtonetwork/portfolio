@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+
+<Base title="Resume — Nick Garcia">
+  <article class="resume">
+    <h1>{SITE.name}</h1>
+    <p class="meta">Pasco, WA · <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+    <p class="resume-actions"><a href="/resume.pdf" download>Download PDF</a></p>
+
+    <h2>Profile</h2>
+    <p>
+      Senior Staff SRE with 11 years of IT experience operating Kubernetes at
+      scale in FedRAMP environments under continuous NIST 800-53 compliance.
+      Core contributor to CyberArk's first FedRAMP-authorized deployment —
+      architecture, control implementation, and audit readiness across initial
+      and annual assessments. Led the migration from a legacy Windows/IIS +
+      MSSQL stack to Kubernetes microservices. Builds AI/agent tooling
+      hands-on: custom MCP servers, Claude-integrated agents, and LLM-assisted
+      SRE workflows. Military background in mission-critical systems + M.S.
+      Cybersecurity.
+    </p>
+
+    <h2>AI &amp; Agent Engineering</h2>
+    <div class="role">
+      <h3>AI Infrastructure &amp; Agent Workflows (Independent Projects)</h3>
+      <ul>
+        <li>Built custom MCP (Model Context Protocol) servers from scratch, wiring Claude to external tools and APIs to create functional AI agents with real-world integrations.</li>
+        <li>Architected a multi-project persistent memory system (Basic Memory MCP) enabling stateful context across agent sessions, structured across work, infrastructure, and personal knowledge domains.</li>
+        <li>Designed agent automation workflows combining LLM reasoning with scripted tool calls — accelerating documentation generation, IT assessments, and operational runbooks.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>Applied AI for SRE (Active Prototyping)</h3>
+      <ul>
+        <li>Prototyping LLM-assisted incident triage, runbook generation, and compliance drift detection — pairing agent reasoning with Steampipe and Terraform state diffing for NIST 800-53 evidence generation.</li>
+      </ul>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="role">
+      <h3>Senior Staff Site Reliability Engineer — Palo Alto Networks (formerly CyberArk)</h3>
+      <p class="meta">Jan 2024 – Present · CyberArk acquired by Palo Alto Networks, Feb 2026</p>
+      <ul>
+        <li>Own reliability and operational excellence of the Endpoint Privilege Management (EPM) backend in AWS — 5 EKS clusters spanning production and non-production across commercial and FedRAMP boundaries.</li>
+        <li>Led container security scan vendor migration to JFrog Xray and Snyk, satisfying third-party requirements for FedRAMP continuous monitoring.</li>
+        <li>Built a FedRAMP-compliant database restore process to demonstrate disaster recovery for annual assessment.</li>
+        <li>Automated CorePAS component install/upgrade with Ansible, cutting deployment time by ~2 hours vs. the prior manual process.</li>
+        <li>Executed STIG hardening and upgrades to satisfy NIST 800-53 Rev5 controls; eliminated wildcard certificates and configured automatic access key rotation.</li>
+        <li>Led modernization from legacy Windows/IIS + MSSQL to Kubernetes microservices on RDS Postgres, OpenSearch, and RabbitMQ.</li>
+        <li>Architect and maintain cloud-native infrastructure (EKS, EC2, RDS/Postgres, S3, VPC, IAM) fully codified in Terraform, managed with Helm, Ansible, and Bamboo CI/CD.</li>
+        <li>Own the vulnerability management loop — Tenable/Nessus and Invicti scanning, CVE triage, remediation coordination, and audit-ready reporting — plus certificate lifecycle operations across ACM, OpenSSL, and internal CAs.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>Site Reliability Engineer — CyberArk</h3>
+      <p class="meta">Apr 2023 – Jan 2024</p>
+      <ul>
+        <li>Implemented high availability and disaster recovery for the CorePAS environment, making privileged access infrastructure fully redundant.</li>
+        <li>Operated AWS/EKS platform services in FedRAMP context; on-call response, triage, and escalation for customer-impacting incidents.</li>
+        <li>Tuned CloudWatch metrics, alarms, and dashboards to reduce alert noise; automated recurring operational work via runbooks and IaC.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>Technical Product Engineer — CyberArk</h3>
+      <p class="meta">Oct 2022 – Apr 2023</p>
+      <ul>
+        <li>Technical SME for Endpoint Privilege Manager — policy enforcement, agent deployment, performance tuning, and endpoint integration across Windows and macOS.</li>
+        <li>Led deep-dive investigations into low-level Windows behavior and process elevation flow; escalated edge-case defects to R&amp;D with debugging artifacts.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>CyberArk Consultant — Focal Point Data Risk LLC (CDW)</h3>
+      <p class="meta">Jun 2020 – Oct 2022</p>
+      <ul>
+        <li>Designed and deployed CyberArk PAM infrastructure across on-premise, hybrid, and cloud environments for Federal customers.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>Airborne Mission Systems Operator — USAF</h3>
+      <p class="meta">Dec 2014 – 2020 · Staff Sergeant (E-5)</p>
+      <ul>
+        <li>Led a flight of ~40 personnel across multiple operational theaters — readiness, scheduling, and mission execution for globally distributed operations.</li>
+        <li>Developed and delivered aircrew training programs — standardized qualification processes and improved troubleshooting proficiency.</li>
+      </ul>
+    </div>
+
+    <h2>Education &amp; Certifications</h2>
+    <ul>
+      <li>M.S., Cybersecurity — Bellevue University, 2020</li>
+      <li>B.A.S., Computer Information Systems — Bellevue University, 2018</li>
+      <li>AWS Generative AI and AI Agents with Amazon Bedrock Specialization — 2026</li>
+      <li>Certified CyberArk Delivery Engineer — 2022</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>AI &amp; Agent Tooling:</strong> MCP server development, Claude integrations, LLM-assisted SRE workflows, agent automation, persistent memory architecture</li>
+      <li><strong>FedRAMP / Compliance:</strong> NIST 800-53 (Rev5), continuous monitoring, STIG hardening, vulnerability remediation, CVE triage</li>
+      <li><strong>Cloud / Platform:</strong> AWS (EKS, EC2, VPC, IAM, RDS/Postgres, S3, CloudWatch, ACM), Kubernetes, Docker, Helm</li>
+      <li><strong>IaC / Automation:</strong> Terraform, CloudFormation, Ansible, Bamboo CI/CD, Bash, PowerShell, Python</li>
+      <li><strong>Observability / IR:</strong> CloudWatch, PagerDuty, Splunk, Steampipe, runbooks, RCA/corrective actions</li>
+    </ul>
+  </article>
+</Base>
