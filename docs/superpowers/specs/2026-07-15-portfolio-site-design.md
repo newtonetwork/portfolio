@@ -46,7 +46,8 @@ portfolio/
       404.astro           custom not-found page
       projects/[slug].astro   writeup pages (getStaticPaths over collection)
   public/
-    resume.pdf            downloadable PDF
+    resume.pdf            downloadable PDF (supplied by Nick from his current
+                          resume; site ships with the file he provides)
   docs/superpowers/specs/ design docs (this file)
 ```
 
