@@ -1,7 +1,59 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <Base>
-  <h1>portfolio scaffold</h1>
+  <section class="hero">
+    <h1>{SITE.name}</h1>
+    <p class="tagline">
+      Senior Staff Site Reliability Engineer — Kubernetes at scale in FedRAMP
+      environments, and hands-on AI/agent tooling.
+    </p>
+    <p>
+      I run the reliability side of a FedRAMP-authorized platform — EKS,
+      Terraform, and continuous NIST 800-53 compliance — and build AI tooling
+      that makes that work faster: custom MCP servers, Claude-integrated
+      agents, and LLM-assisted SRE workflows. Before this: privileged access
+      management consulting, and six years operating airborne mission systems
+      in the US Air Force.
+    </p>
+  </section>
+
+  <section class="highlights" aria-label="Highlights">
+    <div class="highlight"><strong>11 yrs</strong><span>IT &amp; mission-critical ops</span></div>
+    <div class="highlight"><strong>FedRAMP</strong><span>core contributor, first authorized deployment</span></div>
+    <div class="highlight"><strong>5 EKS</strong><span>clusters owned, prod + non-prod</span></div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      {
+        projects.map((p) => (
+          <a class="card" href={`/projects/${p.id}/`}>
+            <h3>{p.data.title}</h3>
+            <p>{p.data.summary}</p>
+            <ul class="stack">
+              {p.data.stack.map((s) => (
+                <li>{s}</li>
+              ))}
+            </ul>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · <a href={SITE.github}>github.com/newtonetwork</a>
+    </p>
+  </section>
 </Base>
