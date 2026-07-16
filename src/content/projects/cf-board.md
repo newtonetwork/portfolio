@@ -47,11 +47,13 @@ tier. Deploy-to-live is under a minute.
 The production board runs private (it holds real family data), so the linked
 repo is a genericized, reusable **template** of the same architecture — the
 Worker, the KV-backed API, the hourly backup cron, and edge rate limiting —
-with the trip-specific model swapped for a five-tab cookout board — Potluck,
-Supplies, and Gear (claimable lists with filters and search), a Guests
-headcount, and a Schedule with RSVPs — themed for the 4th of July, a nod to
-the original's first outing. Clone it, `wrangler deploy`, and you have your own
-shared board in about five minutes.
+— a feature-for-feature port with the family data swapped for a generic
+4th-of-July lake weekend. Five tabs: day-slotted Meals with menus and potluck
+sides, a Staples grocery list with got-it tracking, categorized Gear, a Roster
+with case-insensitive identity and party headcounts, and a time-sorted Events
+schedule with RSVPs — plus a claim-progress bar, live weather card, offline
+mode with write replay, and a hidden fireworks easter egg. Clone it,
+`wrangler deploy`, and you have your own board in about five minutes.
 
 The **live demo** runs the template unchanged — open it in two tabs (or send
 it to a friend) and watch edits sync. It's a no-login board, so treat anything
