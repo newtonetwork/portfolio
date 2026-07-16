@@ -2,6 +2,7 @@
 title: "cf-board — shared trip board on Cloudflare Workers"
 summary: "A no-login, real-time-enough family trip board. One Worker serves a React app and a KV-backed API; everyone with the URL sees the same live board. Runs for ~$0/month with hourly automated backups."
 stack: ["Cloudflare Workers", "Workers KV", "React", "Wrangler"]
+repo: "https://github.com/newtonetwork/cf-board-template"
 order: 1
 ---
 
@@ -39,3 +40,12 @@ No accounts, no database server, no build pipeline beyond `wrangler deploy`.
 
 In active family use. Total infrastructure cost: $0 on the Workers free
 tier. Deploy-to-live is under a minute.
+
+## Source
+
+The production board runs private (it holds real family data), so the linked
+repo is a genericized, reusable **template** of the same architecture — the
+Worker, the KV-backed API, the hourly backup cron, and edge rate limiting —
+with the trip-specific model swapped for neutral Checklist and Notes demo
+sections. Clone it, `wrangler deploy`, and you have your own shared board in
+about five minutes.
