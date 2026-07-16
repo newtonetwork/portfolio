@@ -2,6 +2,7 @@
 title: "ConfigDrift — self-hosted configuration drift monitor"
 summary: "A Go agent snapshots host state into SQLite and diffs it against a promoted baseline; a FastAPI + HTMX UI reviews, acknowledges, and promotes drift. Built with NIST 800-53 configuration-management controls in mind."
 stack: ["Go", "SQLite", "FastAPI", "HTMX", "Docker"]
+repo: "https://github.com/newtonetwork/configdrift"
 order: 2
 ---
 
