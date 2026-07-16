@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "compatibility_date": "2026-07-15",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "portfolio.wwoab.dev", "custom_domain": true }
+  ]
+}
