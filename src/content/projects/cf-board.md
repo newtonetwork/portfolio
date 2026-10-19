@@ -2,8 +2,7 @@
 title: "cf-board — shared trip board on Cloudflare Workers"
 summary: "A no-login, real-time-enough family trip board. One Worker serves a React app and a KV-backed API; everyone with the URL sees the same live board. Runs for ~$0/month with hourly automated backups."
 stack: ["Cloudflare Workers", "Workers KV", "React", "Wrangler"]
-repo: "https://github.com/newtonetwork/cf-board-template"
-demo: "https://cf-board.nick-garci28.workers.dev"
+repo: "https://github.com/ngarcia-18/tbt-trip-board"
 order: 1
 ---
 
@@ -55,6 +54,9 @@ schedule with RSVPs — plus a claim-progress bar, live weather card, offline
 mode with write replay, and a hidden fireworks easter egg. Clone it,
 `wrangler deploy`, and you have your own board in about five minutes.
 
-The **live demo** runs the template unchanged — open it in two tabs (or send
-it to a friend) and watch edits sync. It's a no-login board, so treat anything
-you type there as public.
+The template is now published as a free giveaway from Two Brothers Technology
+([2brostech.com/free/trip-board](https://2brostech.com/free/trip-board)). Boards
+deploy private by default: a per-board key rides in the link's URL fragment, the
+Worker checks it in constant time, and the API only accepts the board's own
+sections. It ships with a copy-paste Claude Code prompt that customizes and
+deploys a board for non-developers in a few minutes.
