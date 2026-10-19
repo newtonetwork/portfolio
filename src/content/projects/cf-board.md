@@ -2,7 +2,7 @@
 title: "cf-board — shared trip board on Cloudflare Workers"
 summary: "A no-login, real-time-enough family trip board. One Worker serves a React app and a KV-backed API; everyone with the URL sees the same live board. Runs for ~$0/month with hourly automated backups."
 stack: ["Cloudflare Workers", "Workers KV", "React", "Wrangler"]
-repo: "https://github.com/ngarcia-18/tbt-trip-board"
+repo: "https://github.com/2BrosTech/tbt-trip-board"
 order: 1
 ---
 
